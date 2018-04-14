@@ -27,11 +27,16 @@ v_x=1;
 h = figure('Name','tildaphi(x-v*t)');
 axis tight manual
 filename = 'Convection.gif';
+
 for t = 1:1:19
     % Draw plot for y = x.^n
     x = -L:L;
     y = tildaphi([-L:L]-v_x*(t-1) );
     plot(x,y) 
+    xlabel('space')
+    ylabel('phi(x)')
+    title(strcat('phi(x) with L= ',num2str(L),' and N= ',num2str(N)))
+
     drawnow 
       % Capture the plot as an image 
       frame = getframe(h); 
