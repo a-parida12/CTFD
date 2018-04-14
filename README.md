@@ -1,6 +1,6 @@
 # CTFD
 
-Matlab Code Implemantation for the TU Munich course (Computational Thermo-Fluid Dynamics) [https://www.tfd.mw.tum.de/index.php?id=44]
+Matlab Code Implemantation for the TU Munich course  (https://www.tfd.mw.tum.de/index.php?id=44)[Computational Thermo-Fluid Dynamics]
 
 Contents
 * Introduction
