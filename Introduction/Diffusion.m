@@ -34,7 +34,7 @@ for t=0:.1:2
     drawnow
      F = getframe(fig); 
      im = frame2im(F); 
-     [imind,cm] = rgb2ind(im,256);
+     [imind,cm] = rgb2ind(im,8);
      
       % Write to the GIF File 
       if t == 0 

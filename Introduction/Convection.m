@@ -35,7 +35,7 @@ for t = 1:1:19
     plot(x,y) 
     xlabel('space')
     ylabel('phi(x)')
-    title(strcat('phi(x) with L= ',num2str(L),' and N= ',num2str(N)))
+    title(strcat('phi(x) with L= ',num2str(L),' and N= ',num2str(N), ' at t=',num2str(t)))
 
     drawnow 
       % Capture the plot as an image 
