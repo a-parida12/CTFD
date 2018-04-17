@@ -14,11 +14,11 @@ PHI(x,t) = sum(subs(a(m,t)*sin(m*pi*(x-Vx*t)/L),m,1:N));
 t=1;
 figure
 plot(-L:L,PHI(-L:L,t))
-title('Function phi(x,t) with L=20 and N=100')
+title(strcat('phi(x) with L= ',num2str(L),' and N= ',num2str(N), ' at t=',num2str(t)))
 xlabel('space')
 ylabel('phi(x,t)')
 %%
-fig = figure;
+fig = figure('Name','tildaphi(x)');
 axis tight manual;
 filename = 'ConvectionDiffusion.gif';
 for t=0:.1:5;
@@ -27,15 +27,17 @@ for t=0:.1:5;
     plot(x,y)
     xlabel('space')
     ylabel('phi(x,t)')
-    axis([-L L -1 1]) 
+    axis([-L L -1 1])
+    title(strcat('phi(x) with L= ',num2str(L),' and N= ',num2str(N), ' at t=',num2str(t)))
+
     drawnow
     %%
      F = getframe(fig); 
       im = frame2im(F); 
-      [imind,cm] = rgb2ind(im,256); 
+      [imind,cm] = rgb2ind(im,8); 
       if t == 0 
           imwrite(imind,cm,filename,'gif', 'Loopcount',inf); 
       else 
-          imwrite(imind,cm,filename,'gif','WriteMode','append'); 
+          imwrite(imind,cm,filename,'gif','WriteMode','append','Delaytime',0);  
       end 
 end

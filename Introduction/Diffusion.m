@@ -19,7 +19,7 @@ xlabel('space')
 ylabel('phi(x,t)')
 %%
 Vx = 1;
-fig = figure;
+fig = figure('Name','tildaphi(x)');
 axis tight manual;
 filename = 'Diffusion.gif';
 for t=0:.1:2
